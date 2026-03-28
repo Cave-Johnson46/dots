@@ -1,0 +1,9 @@
+cat config
+width=1500
+always_parse_args=true
+show_all=false
+insensitive=true
+allow_images=true
+sort_order=alphabetical
+
+
