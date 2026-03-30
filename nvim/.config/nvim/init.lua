@@ -1,4 +1,7 @@
-require("theprimeagen")
+require("config.lazy")
 
--- hello fem
+require("config.treesitter")
 
+require("options")
+
+require("keybinds")
