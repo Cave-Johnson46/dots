@@ -7,7 +7,28 @@ return {
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
-    config = function()
-      vim.keymap.set('n', '<leader>ft', ':Neotree filesystem reveal left<CR>')
-    end
+    opts = {
+            event_handlers = {
+                {
+                  event = "file_open_requested",
+                  handler = function()
+                    -- auto close
+                    -- vim.cmd("Neotree close")
+                    -- OR
+                    require("neo-tree.command").execute({ action = "close" })
+                  end
+                },
+                {
+                  event = "after_render",
+                  handler = function(state)
+                    if not require("neo-tree.sources.common.preview").is_active() then
+                      state.config = { use_float = true }
+                      state.commands.toggle_preview(state)
+                    end
+                  end,
+                },
+              },
+
+
+    }
 }

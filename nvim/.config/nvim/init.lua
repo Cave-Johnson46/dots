@@ -16,6 +16,4 @@ vim.cmd("set shiftwidth=2")
 
 require("config.lazy")
 
-require("config.treesitter")
-
 require("config.keybinds")
