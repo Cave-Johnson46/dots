@@ -6,6 +6,36 @@ return {
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {
-      preset = 'obsidian'
+      link = {
+        enabled = true,
+        render_modes = false,
+        footnote = {
+            enabled = true,
+            icon = '󰯔 ',
+            body = function(ctx)
+                return ctx.text
+            end,
+            superscript = true,
+            prefix = '',
+            suffix = '',
+        },
+        image = '󰥶 ',
+        image_custom = true,
+        email = '󰀓 ',
+        hyperlink = '󰌹 ',
+        highlight = 'RenderMarkdownLink',
+        highlight_title = 'RenderMarkdownLinkTitle',
+        wiki = {
+            enabled = true,
+            icon = '󱗖 ',
+            body = function()
+                return nil
+            end,
+            highlight = 'RenderMarkdownWikiLink',
+            scope_highlight = nil,
+        },
+      },
+    heading = { border = true },
+    indent = { enabled = true },
     },
 }
