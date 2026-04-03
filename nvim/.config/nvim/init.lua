@@ -7,7 +7,7 @@ vim.o.relativenumber = true
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
 vim.o.scrolloff = 10
-vim.o.undufile = true
+vim.o.undofile = true
 vim.o.cursorline = true
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
