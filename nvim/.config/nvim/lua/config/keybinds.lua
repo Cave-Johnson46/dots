@@ -3,8 +3,4 @@
 -- vim.keymap.set("n", "<C-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-k>", "<C-w>K", { desc = "Move window to the upper" })
 
-
-vim.keymap.set('n', '<leader>ft', ':Neotree filesystem reveal left<CR>')
-
-
-
+vim.keymap.set("n", "<leader>ft", ":Neotree filesystem reveal left<CR>")

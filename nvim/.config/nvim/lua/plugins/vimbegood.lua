@@ -1,5 +1,5 @@
 return{
-  'ThePrimeagen/vim-be-good',
-  lazy = false,
-  opts = {}
+--  'ThePrimeagen/vim-be-good',
+--  lazy = false,
+--  opts = {}
 }
