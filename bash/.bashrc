@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 export PATH=~/.cargo/bin:$PATH
-
+export WLR_NO_HARDWARE_CURSORS=1
 
 tac "$HISTFILE" | awk '!x[$0]++' > /tmp/tmpfile  &&
                 tac /tmp/tmpfile > "$HISTFILE"
