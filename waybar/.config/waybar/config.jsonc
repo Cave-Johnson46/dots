@@ -2,7 +2,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["custom/weather", "wireplumber", "clock"],
+  "modules-right": ["mpris","custom/weather", "wireplumber", "clock"],
 
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%A, %D - %I:%M %p}",
@@ -43,5 +43,16 @@
           "default": ["", "", " "]
       },
       "on-click": "pwvucontrol"
+  },
+  "mpris": {
+    "format": "{player_icon}    {artist} - {title}",
+    "format-paused": "{status_icon}    {artist} - {title}",
+    "player-icons": {
+        "default": ""
+    },
+    "status-icons": {
+        "paused": ""
+    },
+    "ignored-players": ["firefox", "zen-browser", "helium-browser"]
   }
 }
