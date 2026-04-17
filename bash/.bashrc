@@ -4,6 +4,9 @@
 export PATH=~/.cargo/bin:$PATH
 export WLR_NO_HARDWARE_CURSORS=1
 
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+
 tac "$HISTFILE" | awk '!x[$0]++' > /tmp/tmpfile  &&
                 tac /tmp/tmpfile > "$HISTFILE"
 rm /tmp/tmpfile
