@@ -44,5 +44,3 @@ function y() {
 
 
 alias ythdr='ENABLE_HDR_WSI=1 mpv'
-
-alias hist='cat ~/.bash_history | fzf | sh'
