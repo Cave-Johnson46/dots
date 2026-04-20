@@ -10,8 +10,8 @@ vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 vim.keymap.set("i", "{<cr>", "{<cr>}<ESC>kA<CR>", {})
-closing_pairs = { "}", ")", "]", '"', "'", ">" }
-opening_pairs = { "{", "(", "[", '"', "'", "<" }
+closing_pairs = { "}", ")", "]", '"', "'" }
+opening_pairs = { "{", "(", "[", '"', "'" }
 for key, chr in pairs(opening_pairs) do
 	vim.keymap.set("i", chr, chr .. closing_pairs[key] .. "<esc>i", {})
 end
