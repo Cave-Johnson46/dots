@@ -11,10 +11,7 @@ tac "$HISTFILE" | awk '!x[$0]++' > /tmp/tmpfile  &&
                 tac /tmp/tmpfile > "$HISTFILE"
 rm /tmp/tmpfile
 
-
-
 eval "$(starship init bash)"
-
 
 shopt -s histappend
 
@@ -29,6 +26,9 @@ export HISTCONTROL=ignoreboth:erasedups
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ythdr='ENABLE_HDR_WSI=1 mpv'
+alias nv='nvim .'
+alias mon='~/dots/hypr/.config/hypr/monitortogle.sh'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR=nvim
@@ -43,4 +43,3 @@ function y() {
 }
 
 
-alias ythdr='ENABLE_HDR_WSI=1 mpv'
