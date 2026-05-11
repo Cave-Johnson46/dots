@@ -29,6 +29,7 @@ return {
 	---@type YaziConfig | {}
 	opts = {
 		-- if you want to open yazi instead of netrw, see below for more info
+		change_neovim_cwd_on_close = true,
 		open_for_directories = true,
 		keymaps = {
 			show_help = "<f1>",
