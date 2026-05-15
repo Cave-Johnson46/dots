@@ -1,9 +1,16 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.showmode = false
 vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.signcolumn = 'yes'
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
 
 vim.opt_local.spelllang = "en"
 vim.opt_local.spell = true
