@@ -12,9 +12,10 @@ hl.bind(
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(main_mod .. " + B", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(main_mod .. " + SPACE", hl.dsp.exec_cmd(menu))
-hl.bind(main_mod .. " + SHIFT + P", hl.dsp.exec_cmd("~/.config/hypr/monitortogle.sh"))
-hl.bind(main_mod .. " + SHIFT + M", hl.dsp.exec_cmd("terminal yazi ~/mnt/plex/Movies"))
-hl.bind(main_mod .. " + SHIFT + O", hl.dsp.exec_cmd("terminal yazi ~/.config/hypr"))
+hl.bind("CTRL + SHIFT + 1", hl.dsp.exec_cmd("~/.config/hypr/monitortogle.sh DP-1"))
+hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("~/.config/hypr/monitortogle.sh DP-2"))
+hl.bind(main_mod .. " + SHIFT + M", hl.dsp.exec_cmd("kitty yazi ~/mnt/plex/Movies"))
+hl.bind(main_mod .. " + SHIFT + O", hl.dsp.exec_cmd("kitty yazi ~/.config/hypr"))
 hl.bind(main_mod .. " + SHIFT + Z", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(main_mod .. " + SHIFT + A", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(main_mod .. " + SHIFT + R", hl.dsp.exec_cmd("rustdesk"))
@@ -36,6 +37,13 @@ for i = 1, 10 do
 	hl.bind(main_mod .. " + " .. key, hl.dsp.focus({ workspace = i }), { bypass = true })
 	hl.bind(main_mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { bypass = true })
 end
+
+hl.bind(main_mod .. " + CTRL + H", hl.dsp.layout("swapcol l"))
+hl.bind(main_mod .. " + CTRL + L", hl.dsp.layout("swapcol r"))
+hl.bind(main_mod .. " + CTRL + J", hl.dsp.layout("consume_or_expel prev"))
+hl.bind(main_mod .. " + CTRL + K", hl.dsp.layout("consume_or_expel next"))
+hl.bind(main_mod .. " + CTRL + comma", hl.dsp.layout("colresize +conf"))
+hl.bind(main_mod .. " + CTRL + period", hl.dsp.layout("colresize -conf"))
 
 hl.bind(main_mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(main_mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })

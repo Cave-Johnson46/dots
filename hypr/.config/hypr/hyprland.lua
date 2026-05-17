@@ -38,7 +38,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 10,
+		rounding = 0,
 		rounding_power = 2,
 
 		-- Change transparency of focused and unfocused windows
@@ -93,7 +93,10 @@ hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "al
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
+hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1", persistent = true, default = true, layout = "scrolling" })
+hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-1", persistent = true, default = true })
+hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-1", persistent = true, default = true })
+
 hl.config({
 	dwindle = {
 		force_split = 0,
@@ -103,25 +106,27 @@ hl.config({
 		permanent_direction_override = false,
 		special_scale_factor = 1,
 		split_width_multiplier = 1.0,
-		use_active_for_splits = true,
+		use_active_for_splits = false,
 		default_split_ratio = 1.0,
 		split_bias = 0,
 		precise_mouse_move = true,
 	},
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
 	master = {
 		new_status = "master",
 	},
 })
 
--- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
 	scrolling = {
-		fullscreen_on_one_column = false,
+		fullscreen_on_one_column = true,
 		column_width = 0.5,
+		focus_fit_method = 1,
+		follow_min_visible = 1,
+		direction = "right",
+		explicit_column_widths = ".2, .25, .333, .5, .75, 1",
 	},
 })
 
@@ -140,6 +145,9 @@ hl.config({
 		kb_model = "",
 		kb_options = "",
 		kb_rules = "",
+
+		repeat_rate = 35,
+		repeat_delay = 200,
 
 		follow_mouse = 1,
 
@@ -179,4 +187,19 @@ hl.window_rule({
 	},
 
 	no_focus = true,
+})
+
+hl.window_rule({
+	name = "steam-on-ws2",
+	match = {
+		class = "^(steam)$",
+	},
+	workspace = "2 silent",
+})
+hl.window_rule({
+	name = "mpv-on-ws3",
+	match = {
+		class = "^(mpv)$",
+	},
+	workspace = "3steam-on-WS2",
 })
