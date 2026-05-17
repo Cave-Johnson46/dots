@@ -21,5 +21,5 @@ vim.keymap.set("i", "{<cr>", "{<cr>}<ESC>kA<CR>", {})
 closing_pairs = { "}", ")", "]" }
 opening_pairs = { "{", "(", "[" }
 for key, chr in pairs(opening_pairs) do
-  vim.keymap.set("i", chr, chr .. closing_pairs[key] .. "<esc>i", {})
+	vim.keymap.set("i", chr, chr .. closing_pairs[key] .. "<esc>i", {})
 end
