@@ -20,8 +20,8 @@ hl.env("_GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
 hl.config({
 	general = {
-		gaps_in = 1,
-		gaps_out = 5,
+		gaps_in = 2,
+		gaps_out = 3,
 
 		border_size = 1,
 
@@ -201,5 +201,23 @@ hl.window_rule({
 	match = {
 		class = "^(mpv)$",
 	},
-	workspace = "3steam-on-WS2",
+	workspace = "3",
+})
+hl.window_rule({
+	name = "rustdesk",
+	match = {
+		class = "^(rustdesk)$",
+	},
+	no_shortcuts_inhibit = true,
+})
+
+hl.window_rule({
+	name = "clipse",
+	match = {
+		class = "^(clipse)$",
+	},
+	float = true,
+	size = "800, 600",
+	stay_focused = true,
+	dim_around = true,
 })
