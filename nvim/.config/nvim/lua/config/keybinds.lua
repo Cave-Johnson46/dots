@@ -5,6 +5,8 @@ vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = false })
 vim.api.nvim_set_keymap("i", "kk", "<Esc>", { noremap = false })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":wq<CR>")
 
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
