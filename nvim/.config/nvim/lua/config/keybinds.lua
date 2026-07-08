@@ -2,6 +2,7 @@ vim.keymap.set("n", "<leader>ft", ":Neotree filesystem reveal left<CR>")
 
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = false })
+vim.api.nvim_set_keymap("i", "kj", "<Esc>", { noremap = false })
 vim.api.nvim_set_keymap("i", "kk", "<Esc>", { noremap = false })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
